@@ -7,12 +7,12 @@ const Navbar = (props)=>{
     let isLoggedIn= props.isLoggedIn;
     let setIsLoggedIn = props.setIsLoggedIn;
     return(
-        <div className="flex justify-evenly">
+        <div className="flex justify-between items-center w-11/12 max-w-[1160px] py-4 mx-auto">
             <Link to="/">
                 <img src={logo} width={160} height={32} loading="lazy"/>
             </Link>
             <nav>
-                <ul className="flex">
+                <ul className="flex gap-x-6 text-slate-200">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -25,24 +25,24 @@ const Navbar = (props)=>{
                 </ul>
             </nav>
 
-            <div className="flex mx-3 gap-3">
+            <div className="flex items-center gap-x-4">
                 { !isLoggedIn &&
                     <Link to="/login">
-                        <button>
-                            Login
+                        <button className="bg-slate-800 text-slate-200 px-[12px] py-[8px] rounded-md border-slate-700">
+                            Log in
                         </button>
                     </Link>
                 }
                 { !isLoggedIn &&
                     <Link to="/signup">
-                        <button>
-                            Sign Up
+                        <button className="bg-slate-800 text-slate-200 px-[12px] py-[8px] rounded-md border-slate-700">
+                            Sign up
                         </button>
                     </Link>
                 }
                 { isLoggedIn &&
                     <Link to="/">
-                        <button onClick={()=>{
+                        <button className="bg-slate-800 text-slate-200 px-[12px] py-[8px] rounded-md border-slate-700" onClick={()=>{
                             setIsLoggedIn(false);
                             toast.success("logout successfully")
                         }}>
@@ -52,7 +52,7 @@ const Navbar = (props)=>{
                 }
                 { isLoggedIn &&
                     <Link to="/dashboard">
-                        <button>
+                        <button className="bg-slate-800 text-slate-200 px-[12px] py-[8px] rounded-md border-slate-700">
                             Dashboard
                         </button>
                     </Link>

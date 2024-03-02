@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import signup from "../assets/signup.jpg"
+import signup from "../assets/signup.png"
 import Template from '../components/Template'
 
 const Signup = ({setIsLoggedIn}) => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Template from "../components/Template";
-import login from "../assets/login.png"
+import login from "../assets/login1.png"
 
 const Login = ({setIsLoggedIn}) => {
   return(
